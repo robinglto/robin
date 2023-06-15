@@ -23,20 +23,20 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const body = document.body;
-      if (body) {
-        body.style.overflow = "hidden";
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const body = document.body;
+  //     if (body) {
+  //       body.style.overflow = "hidden";
+  //     }
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
     <main className="flex min-h-screen flex-col justify-between md:px-24 px-5 ">
