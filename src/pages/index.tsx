@@ -39,7 +39,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <main className="flex min-h-screen flex-col justify-between md:px-24 px-5 ">
+    <main className="flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
       <style jsx>{`
         .mouse-shadow {
           position: absolute;
