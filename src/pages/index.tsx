@@ -8,7 +8,7 @@ export default function Home() {
     const handleMouseMove = (event: MouseEvent) => {
       const shadow = document.getElementById("mouse-shadow");
       if (shadow) {
-        const shadowOffset = 50;
+        const shadowOffset = 40;
         const x = event.clientX - shadowOffset / 2;
         const y = event.clientY - shadowOffset / 2;
         shadow.style.left = `${x}px`;
@@ -23,21 +23,6 @@ export default function Home() {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     const body = document.body;
-  //     if (body) {
-  //       body.style.overflow = "hidden";
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   return (
     <main className="flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
       <style jsx>{`
@@ -47,8 +32,8 @@ export default function Home() {
           left: 0;
           width: 80vw;
           height: 80vw;
-          max-width: 600px;
-          max-height: 600px;
+          max-width: 500px;
+          max-height: 500px;
           border-radius: 50%;
           background-color: rgba(200, 205, 205, 0.1);
           pointer-events: none;
@@ -60,7 +45,7 @@ export default function Home() {
         }
       `}</style>
       <NavBar />
-      <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
+      <div id="mouse-shadow" className=" mouse-shadow"></div>
       <About />
       <Footer />
     </main>

@@ -63,21 +63,21 @@ export default function About() {
       <div className="subpixel-antialiased flex justify-center space-x-10 md:mx-10 mb-10 mt-6">
         <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 w-full sm:mx-10 p-4">
           <div className="animate-reveal-up">
-            <h2 className="animate-typing subpixel-antialiased font-semibold text-gray-100/90 text-6xl">
+            <h2 className="animate-typing subpixel-antialiased font-semibold text-gray-100/90 lg:text-6xl md:text-4xl text-3xl">
               Saul Perez
             </h2>
 
-            <p className="subpixel-antialiased text-focus-in text-xl text-gray-500 mb-4">
+            <p className="subpixel-antialiased text-focus-in md:text-xl text-lg text-gray-500 mb-4">
               Software Developer
             </p>
-            <p className="text-gray-300 text-xl text-focus-in">
+            <p className="text-gray-300 lg:text-lg md:text-md text-sm text-focus-in">
               Software developer, dedicated to creating accessible and
               user-centered digital products. Passionate about crafting
               high-quality software solutions and seeking new opportunities in
               the field.
             </p>
 
-            <div className="flex space-x-2 text-gray-500 my-5 hover:text-gray-300/90 transition delay-150 duration-300 ease-in-out hover:cursor-pointer">
+            <div className="flex space-x-2 text-gray-500 my-5 hover:text-gray-300/90 transition delay-150 duration-300 ease-in-out hover:cursor-pointer sm:text-md text-sm">
               <SewingPinFilledIcon className="my-1" />
               <p>Open to remote or near Dominican Republic</p>
             </div>
