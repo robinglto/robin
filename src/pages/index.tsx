@@ -45,7 +45,7 @@ export default function Home() {
         }
       `}</style>
       <NavBar />
-      <div id="mouse-shadow" className=" mouse-shadow"></div>
+      <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
       <About />
       <Footer />
     </main>
