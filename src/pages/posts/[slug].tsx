@@ -3,6 +3,9 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import { GetStaticPropsContext } from "next";
+import { useEffect } from "react";
+import { ArrowLeftIcon, DotFilledIcon } from "@radix-ui/react-icons";
+import Footer from "@/components/Footer";
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
@@ -24,6 +27,25 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 }
 
 const PostLayout = ({ post }: any) => {
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      const shadow = document.getElementById("mouse-shadow");
+      if (shadow) {
+        const shadowOffset = 40;
+        const x = event.clientX - shadowOffset / 2;
+        const y = event.clientY - shadowOffset / 2;
+        shadow.style.left = `${x}px`;
+        shadow.style.top = `${y}px`;
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -32,32 +54,40 @@ const PostLayout = ({ post }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className=" ">
+
+      <div>
         <article className="mx-6 sm:mx-auto max-w-2xl py-16">
           <div className="mb-6">
-            <h1 className="mb-1 text-3xl font-bold text-white text-center">
+            <h1 className="mb-4 text-3xl font-semibold text-white text-start">
               {post.title}
             </h1>
-            <time
-              dateTime={post.date}
-              className="text-sm text-slate-600 flex justify-center mb-20"
-            >
-              {format(parseISO(post.date), "LLLL d, yyyy")}
-            </time>
+            <div className="flex justify-between">
+              <div className="flex space-x-2 mb-20 justify-start font-medium text-gray-400 text-sm">
+                <p>Saul Perez,</p>
+                <time dateTime={post.date}>{post.date}</time>
+                <DotFilledIcon className="mt-1" />
+                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover::text-gray-100 cursor-pointer">
+                  {post.category}
+                </p>
+              </div>
+              <div className="flex space-x-1.5   text-md  text-gray-100 hover:text-gray-400 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
+                <ArrowLeftIcon className="mt-1.5" />
+                <Link href="/">Back</Link>
+              </div>
+            </div>
+
+            <h3 className="mb-4 text-lg font-semibold text-white text-start">
+              {post.subtitle}
+            </h3>
 
             <div
-              className="text-neutral-200 prose prose-md prose-neutral prose-invert"
+              className="text-neutral-200 prose prose-neutral  "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>
         </article>
-        <div className="flex justify-center">
-          <Link
-            href="/"
-            className="border-2 border-neutral-800 rounded-xl hover:rounded-md py-1 px-3 text-md  text-gray-200 bg-neutral-800 hover:border-neutral-700 hover:bg-neutral-800/70 transition duration-500 ease-in-out cursor-pointer mb-28"
-          >
-            Back
-          </Link>
+        <div className="flex justify-around mb-28">
+          <Footer />
         </div>
       </div>
     </>

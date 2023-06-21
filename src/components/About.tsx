@@ -86,15 +86,13 @@ export default function About() {
                 <GitHubLogoIcon className="w-5 h-5 hover:text-white transition delay-150 duration-300 ease-in-out" />
               </Link>
 
-              <LinkedInLogoIcon className="w-5 h-5 hover:text-white transition delay-150 duration-300 ease-in-out " />
+              <NotionLogoIcon className="w-5 h-5 hover:text-white transition delay-150 duration-300 ease-in-out " />
               <Link href={"https://twitter.com/robinglto"}>
                 <TwitterLogoIcon className="w-5 h-5 hover:text-white transition delay-150 duration-300 ease-in-out " />
               </Link>
               <Link href={"mailto:pfzsaul@gmail.com"}>
                 <EnvelopeClosedIcon className="w-5 h-5 hover:text-white transition delay-150 duration-300 ease-in-out " />
               </Link>
-
-              {/* <NotionLogoIcon className="w-5 h-5" /> */}
             </div>
           </div>
         </div>

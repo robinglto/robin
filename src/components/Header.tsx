@@ -19,7 +19,7 @@ export default function NavBar() {
           </li>
           <li
             className={`hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
-              router.pathname === "/snippets" ? "text-white" : "text-gray-500"
+              router.pathname === "/blog" ? "text-white" : "text-gray-500"
             }`}
           >
             <Link href={"/blog"}>Blog</Link>

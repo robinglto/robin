@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Next Router Library
+title: Introduction to the Next/Router Library
 subtitle: Exploring the Next/Router Library  Seamless Navigation in Next.js...
 date: Wed June 21 2023
 category: technology
