@@ -61,16 +61,19 @@ const PostLayout = ({ post }: any) => {
               {post.title}
             </h1>
             <div className="flex justify-between">
-              <div className="flex space-x-2 mb-20 justify-start font-medium text-gray-400 text-sm">
-                <p>Saul Perez,</p>
-                <time dateTime={post.date}>{post.date}</time>
-                <DotFilledIcon className="mt-1" />
-                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover::text-gray-100 cursor-pointer">
+              <div className="sm:flex space-x-2 mb-20 sm:justify-start font-medium text-gray-400 text-sm ">
+                <div className="flex space-x-1">
+                  <p>Saul Perez,</p>
+                  <time dateTime={post.date}>{post.date}</time>
+                </div>
+                <DotFilledIcon className="mt-1 sm:block hidden" />
+                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover:text-gray-100 cursor-pointer sm:block hidden">
                   {post.category}
                 </p>
               </div>
-              <div className="flex space-x-1.5   text-md  text-gray-100 hover:text-gray-400 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
-                <ArrowLeftIcon className="mt-1.5" />
+
+              <div className="flex space-x-1.5   text-sm  text-gray-100 hover:text-gray-400 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
+                <ArrowLeftIcon className="mt-1" />
                 <Link href="/">Back</Link>
               </div>
             </div>
