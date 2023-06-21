@@ -63,7 +63,7 @@ export default function About() {
       <div className="subpixel-antialiased flex justify-center space-x-10 md:mx-10 mb-10 mt-6">
         <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 w-full sm:mx-10 p-4">
           <div className="animate-reveal-up">
-            <h2 className="animate-typing subpixel-antialiased font-semibold text-gray-100/90 lg:text-6xl md:text-4xl text-3xl">
+            <h2 className="animate-typing subpixel-antialiased font-semibold text-gray-100/90 lg:text-6xl text-4xl">
               Saul Perez
             </h2>
 
