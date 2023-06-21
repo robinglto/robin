@@ -1,7 +1,9 @@
 // app/page.tsx
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
+// import { allPosts, Post } from "contentlayer/generated";
+// import { allPosts, Post } from ".contentlayer/generated";
+import { allPosts, Post } from ".contentlayer/generated";
 
 function PostCard(post: Post) {
   return (
@@ -14,7 +16,6 @@ function PostCard(post: Post) {
           {post.title}
         </Link>
       </h2>
-      <p>{post.description}</p>
       <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
