@@ -8,8 +8,8 @@ import { ArrowTopRightIcon, Link2Icon } from "@radix-ui/react-icons";
 
 function PostCard(post: any) {
   return (
-    <div className=" space-y-4 font-medium rounded-xl border border-transparent  hover:border-zinc-950 hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out p-4">
-      <h2 className="mb-1 text-lg">
+    <div className=" space-y-4 font-medium rounded-xl border border-transparent  hover:border-zinc-950 hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
+      <h2 className="mb-1 text-md sm:text-lg">
         <Link
           href={post.url}
           className="text-white hover:text-white/80 transition delay-150 duration-700 ease-in-out "
@@ -19,8 +19,8 @@ function PostCard(post: any) {
       </h2>
 
       <div className="lg:flex lg:space-x-2">
-        <p className="text-gray-400 text-md">{post.description}</p>
-        <div className="lg:flex-0 flex space-x-1">
+        <p className="text-gray-400 sm:text-md text-sm">{post.description}</p>
+        <div className="lg:flex-0 flex space-x-1 sm:text-md text-sm">
           <Link
             href={post.url}
             className="text-white hover:text-white/80 transition delay-150 duration-700 ease-in-out hover:underline"
@@ -62,7 +62,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col justify-between md:px-24 px-5">
+    <main className="min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
         .mouse-shadow {
           position: absolute;
@@ -113,7 +113,7 @@ export default function Blog() {
           animation: reveal-up 1s ease-out;
         }
       `}</style>
-      <div className="flex flex-col justify-between min-h-screen">
+      <div className="flex flex-col justify-between min-h-screen px-3">
         <NavBar />
         <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
 
