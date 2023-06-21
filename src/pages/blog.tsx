@@ -3,9 +3,9 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 // import { allPosts, Post } from "contentlayer/generated";
 // import { allPosts, Post } from ".contentlayer/generated";
-import { allPosts, Post } from ".contentlayer/generated";
+import { allPosts } from ".contentlayer/generated";
 
-function PostCard(post: Post) {
+function PostCard(post: any) {
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
