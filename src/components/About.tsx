@@ -82,8 +82,10 @@ export default function About() {
               <Link href={"https://github.com/robinglto/"}>
                 <GitHubLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out" />
               </Link>
-
+              <Link href={"https://checker-napkin-995.notion.site/JS-basico-8bd5e6722e8b443f91cd2988ad31cb0e?pvs=4"}>
               <NotionLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out " />
+              </Link>
+              
               <Link href={"https://twitter.com/robinglto"}>
                 <TwitterLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out " />
               </Link>

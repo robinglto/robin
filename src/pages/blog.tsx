@@ -5,8 +5,10 @@ import NavBar from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { ArrowTopRightIcon, Link2Icon } from "@radix-ui/react-icons";
+import { useTheme } from "next-themes";
 
 function PostCard(post: any) {
+
 
 
   return (
@@ -62,27 +64,43 @@ export default function Blog() {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
+  const { theme } = useTheme();
   return (
     <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
-        .mouse-shadow {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 80vw;
-          height: 80vw;
-          max-width: 500px;
-          max-height: 500px;
-          border-radius: 50%;
-          background-color: rgba(200, 205, 205, 0.1);
-          pointer-events: none;
-          transform: translate(-50%, -50%);
-          z-index: 9999;
-          transition: transform 0.1s ease;
-          filter: blur(80px);
-          opacity: 2;
-        }
+  @media (min-width: 601px) {
+    body {
+      overflow-y: hidden;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      overflow-y: scroll;
+    }
+  }
+  
+  .mouse-shadow {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 80vw;
+    height: 100vw;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    background-color: ${
+      theme === "dark" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.12)"
+    };
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    filter: blur(80px);
+    opacity: 2;
+  }
+  
+
 
         @keyframes text-focus-in {
           0% {

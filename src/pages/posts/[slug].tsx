@@ -61,7 +61,7 @@ const PostLayout = ({ post }: any) => {
 
               <div className="flex space-x-1.5   text-sm  text-gray-100 hover:text-gray-400 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
                 <ArrowLeftIcon className="mt-1" />
-                <Link href="/">Back</Link>
+                <Link href="/blog">Back</Link>
               </div>
             </div>
             
