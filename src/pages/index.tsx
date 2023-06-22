@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import NavBar from "@/components/Header";
@@ -25,22 +26,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className=" dark:bg-black bg-white flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
+    <main  className="dark:bg-black bg-white  flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
       <style jsx>{`
-         @media (min-height: 600px) {
-          html,
-          body {
-            overflow-y: hidden;
-            height: 100%;
-          }
-
-          body {
-            position: relative;
-          }
-          #mouse-shadow {
-            display: none;
-          }
-        }
+        
         .mouse-shadow {
           position: absolute;
           top: 0;
@@ -58,7 +46,6 @@ export default function Home() {
           filter: blur(80px);
           opacity: 2;
         }
-        
         
       `}</style>
       <NavBar />

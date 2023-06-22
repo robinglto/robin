@@ -33,7 +33,7 @@ function PostCard(post: any) {
         </div>
       </div>
 
-      <time dateTime={post.date} className="mb-2 block text-sm text-gray-900 dark:text-gray-300">
+      <time dateTime={post.date} className="mb-2 block text-sm text-gray-800 dark:text-gray-300">
         {post.date}
       </time>
     </div>
@@ -66,20 +66,6 @@ export default function Blog() {
   return (
     <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
-           @media (min-height: 600px) {
-            html,
-            body {
-              overflow-y: hidden;
-              height: 100%;
-            }
-  
-            body {
-              position: relative;
-            }
-            #mouse-shadow {
-              display: none;
-            }
-          }
         .mouse-shadow {
           position: absolute;
           top: 0;
