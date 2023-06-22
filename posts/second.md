@@ -3,7 +3,7 @@ title: Introduction to the Next/Router Library
 subtitle: Exploring the Next/Router Library  Seamless Navigation in Next.js...
 date: Wed June 21 2023
 category: technology
-description: How to navigate your Nextjs application with the powerfull Next/Router library.
+description: How to navigate your Nextjs application with the powerfull Next Router.
 ---
 
 Routing in Next.js is handled with the next/router library. This library provides a number of functions and objects that allow us to navigate between different pages in our application, as well as get information about the current route.
