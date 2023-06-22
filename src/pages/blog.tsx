@@ -8,7 +8,7 @@ import { ArrowTopRightIcon, Link2Icon } from "@radix-ui/react-icons";
 
 function PostCard(post: any) {
   return (
-    <div className="p-2 space-y-4 font-medium rounded-xl border border-transparent  hover:border-zinc-950 hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
+    <div className="sm:p-4 p-2 space-y-4 font-medium rounded-xl border border-transparent  hover:border-zinc-950 hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
       <h2 className="mb-1 text-md sm:text-lg">
         <Link
           href={post.url}

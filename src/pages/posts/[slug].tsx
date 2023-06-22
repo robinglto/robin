@@ -26,24 +26,11 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 }
 
 const PostLayout = ({ post }: any) => {
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const shadow = document.getElementById("mouse-shadow");
-      if (shadow) {
-        const shadowOffset = 40;
-        const x = event.clientX - shadowOffset / 2;
-        const y = event.clientY - shadowOffset / 2;
-        shadow.style.left = `${x}px`;
-        shadow.style.top = `${y}px`;
-      }
-    };
+  
 
-    document.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  
+
 
   return (
     <>
@@ -55,6 +42,7 @@ const PostLayout = ({ post }: any) => {
       </Head>
 
       <div>
+
         <article className="mx-6 sm:mx-auto max-w-2xl py-16">
           <div className="mb-6">
             <h1 className="mb-4 text-3xl font-semibold text-white text-start">
@@ -67,7 +55,7 @@ const PostLayout = ({ post }: any) => {
                   <time dateTime={post.date}>{post.date}</time>
                 </div>
                 <DotFilledIcon className="mt-1 sm:block hidden" />
-                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover:text-gray-100 cursor-pointer sm:block hidden">
+                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover:text-gray-100 cursor-pointer sm:block hidden transition delay-150 duration-500 ease-in-out ">
                   {post.category}
                 </p>
               </div>
@@ -77,13 +65,14 @@ const PostLayout = ({ post }: any) => {
                 <Link href="/">Back</Link>
               </div>
             </div>
+            
 
-            <h3 className="mb-4 text-lg font-semibold text-white text-start">
+            <h3 className="mb-4 text-lg font-semibold text-white text-start ">
               {post.subtitle}
             </h3>
 
             <div
-              className="text-neutral-200 prose prose-neutral  "
+              className="text-neutral-200 prose-gray prose   "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>
