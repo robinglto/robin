@@ -4,6 +4,7 @@ import About from "@/components/About";
 import NavBar from "@/components/Header";
 
 export default function Home() {
+
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const shadow = document.getElementById("mouse-shadow");
@@ -24,7 +25,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
+    <main className="dark:bg-black bg-white flex min-h-screen 	 flex-col justify-between md:px-24 px-5 ">
       <style jsx>{`
         .mouse-shadow {
           position: absolute;
@@ -43,6 +44,7 @@ export default function Home() {
           filter: blur(80px);
           opacity: 2;
         }
+        
       `}</style>
       <NavBar />
       <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>

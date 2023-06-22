@@ -10,22 +10,22 @@ function PostCard(post: any) {
 
 
   return (
-    <div className="sm:p-4 p-2 space-y-4 font-medium rounded-xl border border-transparent  hover:border-zinc-950 hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
+    <div className="hover:border-gray-100 hover:bg-gray-100 sm:p-4 p-2 space-y-4 font-medium rounded-xl border border-transparent  dark:hover:border-zinc-950 dark:hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
       <h2 className="mb-1 text-md sm:text-lg">
         <Link
           href={post.url}
-          className="text-white hover:text-white/80 transition delay-150 duration-700 ease-in-out "
+          className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out "
         >
           {post.title}
         </Link>
       </h2>
 
       <div className="lg:flex lg:space-x-2">
-        <p className="text-gray-400 sm:text-md text-sm">{post.description}</p>
+        <p className="text-gray-700 dark:text-gray-400 sm:text-md text-sm">{post.description}</p>
         <div className="lg:flex-0 flex space-x-1 sm:text-md text-sm">
           <Link
             href={post.url}
-            className="text-white hover:text-white/80 transition delay-150 duration-700 ease-in-out hover:underline"
+            className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out hover:underline"
           >
             Read more
           </Link>
@@ -33,7 +33,7 @@ function PostCard(post: any) {
         </div>
       </div>
 
-      <time dateTime={post.date} className="mb-2 block text-sm text-gray-300">
+      <time dateTime={post.date} className="mb-2 block text-sm text-gray-900 dark:text-gray-300">
         {post.date}
       </time>
     </div>
@@ -64,7 +64,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col justify-between md:px-24 ">
+    <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
         .mouse-shadow {
           position: absolute;

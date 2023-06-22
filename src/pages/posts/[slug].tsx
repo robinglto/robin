@@ -72,7 +72,7 @@ const PostLayout = ({ post }: any) => {
             </h3>
 
             <div
-              className="text-neutral-200 prose-gray prose   "
+              className="text-neutral-200 prose-zinc dark:prose-gray prose   "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>

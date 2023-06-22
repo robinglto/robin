@@ -17,7 +17,14 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(0, 0, 0);
+  /* color: rgb(var(--foreground-rgb));
+  background-color: rgb(15, 23, 42); */
   overflow-x: hidden;
+  overflow-y: hidden; /* Estado normal para el overflow-y */
+}
+
+@media (max-width: 599px) {
+  body {
+    overflow-y: auto; /* Overflow-y oculto para pantallas menores a 600px */
+  }
 }
