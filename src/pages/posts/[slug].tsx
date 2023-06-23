@@ -25,12 +25,6 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
 }
 
 const PostLayout = ({ post }: any) => {
-  
-
-
-  
-
-
   return (
     <>
       <Head>
@@ -40,38 +34,38 @@ const PostLayout = ({ post }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-
+``      <div>
         <article className="mx-6 sm:mx-auto max-w-2xl py-16">
           <div className="mb-6">
-            <h1 className="mb-4 text-3xl font-semibold text-white text-start">
+            <h1 className="mb-4 text-3xl font-semibold text-black  text-start">
               {post.title}
             </h1>
             <div className="flex justify-between">
-              <div className="sm:flex space-x-2 mb-20 sm:justify-start font-medium text-gray-400 text-sm ">
+              <div className="sm:flex space-x-2 mb-20 sm:justify-start font-medium text-gray-700 text-sm ">
                 <div className="flex space-x-1">
                   <p>Saul Perez,</p>
                   <time dateTime={post.date}>{post.date}</time>
                 </div>
                 <DotFilledIcon className="mt-1 sm:block hidden" />
-                <p className="rounded-lg px-1 py-0 border border-gray-600 bg-gray-600 text-gray-200 hover:border-gray-700 hover:bg-gray-700 hover:text-gray-100 cursor-pointer sm:block hidden transition delay-150 duration-500 ease-in-out ">
+                <p className="border-gray-100 bg-gray-100 text-gray-800 hover:border-gray-200 hover:bg-gray-200 hover:text-gray-900
+                rounded-lg px-1 py-0 border cursor-pointer sm:block hidden transition delay-150 duration-500 ease-in-out ">
                   {post.category}
                 </p>
               </div>
 
-              <div className="flex space-x-1.5   text-sm  text-gray-100 hover:text-gray-400 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
+              <div className="flex space-x-1.5 font-medium  text-sm text-gray-900 hover:text-gray-600 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
                 <ArrowLeftIcon className="mt-1" />
                 <Link href="/blog">Back</Link>
               </div>
             </div>
             
 
-            <h3 className="mb-4 text-lg font-semibold text-white text-start ">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800  text-start ">
               {post.subtitle}
             </h3>
 
             <div
-              className="text-neutral-200 prose-zinc dark:prose-gray prose   "
+              className=" prose-zinc  prose   "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>

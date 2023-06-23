@@ -86,11 +86,15 @@ export default function Blog() {
     left: 30px;
     width: 80vw;
     height: 100vw;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: ${
+      theme === "dark" ? "500px" : "350px"
+    };
+    max-height: ${
+      theme === "dark" ? "500px" : "350px"
+    };
     border-radius: 50%;
     background-color: ${
-      theme === "dark" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.12)"
+      theme === "dark" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.23)"
     };
     pointer-events: none;
     transform: translate(-50%, -50%);
