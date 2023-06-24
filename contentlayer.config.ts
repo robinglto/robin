@@ -1,4 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import rehypePrettyCode from "rehype-pretty-code"
+
+
 import { type } from 'os'
 
 export const Post = defineDocumentType(() => ({

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export default function NavBar() {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function NavBar() {
           className={`hover:dark:text-white hover:text-black text-gray-500 subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out`}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {theme === "dark" ? "Light" : "Dark"}
+          {theme === "dark" ? <SunIcon/> : <MoonIcon/>}
         </button>
       </div>
     </div>
