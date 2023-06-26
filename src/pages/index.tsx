@@ -56,7 +56,7 @@ export default function Home() {
     max-height: 500px;
     border-radius: 50%;
     background-color: ${
-      theme === "dark" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.1)"
+      theme !== "light" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.1)"
     };
     pointer-events: none;
     transform: translate(-50%, -50%);

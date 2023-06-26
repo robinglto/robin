@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -7,6 +7,8 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 export default function NavBar() {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
+
+
 
   return (
     <div className="flex justify-between lg:mx-32 mt-12">
@@ -37,7 +39,7 @@ export default function NavBar() {
           className={`hover:dark:text-white hover:text-black text-gray-500 subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out`}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {theme === "dark" ? <SunIcon/> : <MoonIcon/>}
+          {theme !== "light" ? <SunIcon/> : <MoonIcon/>}
         </button>
       </div>
     </div>
