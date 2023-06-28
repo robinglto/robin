@@ -64,7 +64,7 @@ export default function About() {
               Saul Perez
             </h2>
 
-            <p className="subpixel-antialiased text-focus-in md:text-xl text-lg text-gray-500 dark:text-gray-500 mb-4">
+            <p className="subpixel-antialiased text-focus-in md:text-xl text-lg text-gray-500 dark:text-gray-400 mb-4">
               Software Developer
             </p>
             <p className="text-gray-800 dark:text-gray-300 lg:text-lg md:text-md text-sm text-focus-in">
@@ -74,23 +74,23 @@ export default function About() {
               the field.
             </p>
 
-            <div className="flex space-x-2 text-gray-500 my-5 hover:text-gray-900 dark:hover:text-gray-300/90 transition delay-150 duration-300 ease-in-out hover:cursor-pointer sm:text-md text-sm">
+            <div className="flex space-x-2 text-gray-500 my-5 hover:text-gray-900 dark:hover:text-gray-300 dark:text-gray-400 transition delay-300 duration-500 ease-in-out hover:cursor-pointer sm:text-md text-sm">
               <SewingPinFilledIcon className="my-1" />
               <p>Open to remote or near Dominican Republic</p>
             </div>
-            <div className="flex space-x-5 my-5 text-focus-in text-gray-500">
+            <div className="flex space-x-5 my-5 text-focus-in text-gray-500 dark:text-gray-400">
               <Link href={"https://github.com/robinglto/"}>
-                <GitHubLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out" />
+                <GitHubLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out" />
               </Link>
               <Link href={"https://checker-napkin-995.notion.site/JS-basico-8bd5e6722e8b443f91cd2988ad31cb0e?pvs=4"}>
-              <NotionLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out " />
+              <NotionLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
               </Link>
               
               <Link href={"https://twitter.com/robinglto"}>
-                <TwitterLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out " />
+                <TwitterLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
               </Link>
               <Link href={"mailto:pfzsaul@gmail.com"}>
-                <EnvelopeClosedIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-150 duration-300 ease-in-out " />
+                <EnvelopeClosedIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
               </Link>
             </div>
           </div>

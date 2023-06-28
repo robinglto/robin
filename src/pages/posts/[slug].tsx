@@ -34,14 +34,14 @@ const PostLayout = ({ post }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-``      <div>
+     <div className="bg-gray-100 dark:bg-black/95">
         <article className="mx-6 sm:mx-auto max-w-2xl py-16">
           <div className="mb-6">
-            <h1 className="mb-4 text-3xl font-semibold text-black  text-start">
+            <h1 className="mb-4 text-3xl font-semibold text-black dark:text-white text-start">
               {post.title}
             </h1>
             <div className="flex justify-between">
-              <div className="sm:flex space-x-2 mb-20 sm:justify-start font-medium text-gray-700 text-sm ">
+              <div className="sm:flex space-x-2 mb-20 sm:justify-start font-medium text-gray-700 dark:text-gray-100 text-sm ">
                 <div className="flex space-x-1">
                   <p>Saul Perez,</p>
                   <time dateTime={post.date}>{post.date}</time>
@@ -53,24 +53,24 @@ const PostLayout = ({ post }: any) => {
                 </p>
               </div>
 
-              <div className="flex space-x-1.5 font-medium  text-sm text-gray-900 hover:text-gray-600 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
+              <div className="flex space-x-1.5 font-medium  text-sm text-gray-900 hover:text-gray-600 dark:text-white hover:dark:text-gray-300 hover:underline  transition duration-500 ease-in-out cursor-pointer ">
                 <ArrowLeftIcon className="mt-1" />
                 <Link href="/blog">Back</Link>
               </div>
             </div>
             
 
-            <h3 className="mb-4 text-lg font-semibold text-gray-800  text-start ">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100  text-start ">
               {post.subtitle}
             </h3>
 
             <div
-              className=" prose-zinc  prose   "
+              className=" prose-zinc  prose text-black dark:text-gray-200  "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>
         </article>
-        <div className="flex justify-around mb-28">
+        <div className="flex justify-around pb-28">
           <Footer />
         </div>
       </div>
