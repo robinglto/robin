@@ -75,8 +75,8 @@ export default function About() {
             </p>
 
             <div className="flex space-x-2 text-gray-500 my-5 hover:text-gray-900 dark:hover:text-gray-300 dark:text-gray-400 transition delay-300 duration-500 ease-in-out hover:cursor-pointer sm:text-md text-sm">
-              <SewingPinFilledIcon className="my-1" />
-              <p>Open to remote or near Dominican Republic</p>
+              <SewingPinFilledIcon className="my-0.5" />
+              <p>Open to remote work, always online.</p>
             </div>
             <div className="flex space-x-5 my-5 text-focus-in text-gray-500 dark:text-gray-400">
               <Link href={"https://github.com/robinglto/"}>
