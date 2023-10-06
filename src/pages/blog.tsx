@@ -8,11 +8,8 @@ import { ArrowTopRightIcon, Link2Icon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
 function PostCard(post: any) {
-
-
-
   return (
-    <div className="hover:border-gray-100 hover:bg-gray-100 sm:p-4 p-2 space-y-4 font-medium rounded-xl border border-transparent  dark:hover:border-zinc-950 dark:hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
+    <div className=" font-sans hover:border-gray-100 hover:bg-gray-100 sm:p-4 p-2 space-y-4 font-medium rounded-xl border border-transparent  dark:hover:border-zinc-950 dark:hover:bg-zinc-950 transition delay-50 duration-700 ease-in-out ">
       <h2 className="mb-1 text-md sm:text-lg">
         <Link
           href={post.url}
@@ -23,7 +20,9 @@ function PostCard(post: any) {
       </h2>
 
       <div className="lg:flex lg:space-x-2">
-        <p className="text-gray-700 dark:text-gray-400 sm:text-md text-sm">{post.description}</p>
+        <p className="text-gray-700 dark:text-gray-400 sm:text-md text-sm">
+          {post.description}
+        </p>
         <div className="lg:flex-0 flex space-x-1 sm:text-md text-sm">
           <Link
             href={post.url}
@@ -35,7 +34,10 @@ function PostCard(post: any) {
         </div>
       </div>
 
-      <time dateTime={post.date} className="mb-2 block text-sm text-gray-800 dark:text-gray-300">
+      <time
+        dateTime={post.date}
+        className="mb-2 block text-sm text-gray-800 dark:text-gray-300"
+      >
         {post.date}
       </time>
     </div>
@@ -68,43 +70,37 @@ export default function Blog() {
   return (
     <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
-  @media (min-width: 601px) {
-    body {
-      overflow-y: hidden;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      overflow-y: scroll;
-    }
-  }
-  
-  .mouse-shadow {
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    width: 80vw;
-    height: 100vw;
-    max-width: ${
-      theme === "dark" ? "500px" : "350px"
-    };
-    max-height: ${
-      theme === "dark" ? "500px" : "350px"
-    };
-    border-radius: 50%;
-    background-color: ${
-      theme !== "light" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.23)"
-    };
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    filter: blur(80px);
-    opacity: 2;
-  }
-  
+        @media (min-width: 601px) {
+          body {
+            overflow-y: hidden;
+          }
+        }
 
+        @media (max-width: 600px) {
+          body {
+            overflow-y: scroll;
+          }
+        }
+
+        .mouse-shadow {
+          position: fixed;
+          top: 30px;
+          left: 30px;
+          width: 80vw;
+          height: 100vw;
+          max-width: ${theme === "dark" ? "500px" : "350px"};
+          max-height: ${theme === "dark" ? "500px" : "350px"};
+          border-radius: 50%;
+          background-color: ${theme !== "light"
+            ? "rgba(200, 205, 205, 0.1);"
+            : "rgba(0, 0, 0, 0.23)"};
+          pointer-events: none;
+          transform: translate(-50%, -50%);
+          z-index: 9999;
+          transition: transform 0.1s ease;
+          filter: blur(80px);
+          opacity: 2;
+        }
 
         @keyframes text-focus-in {
           0% {

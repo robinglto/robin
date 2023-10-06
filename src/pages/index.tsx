@@ -4,7 +4,6 @@ import NavBar from "@/components/Header";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
-
 export default function Home() {
   const { theme } = useTheme();
 
@@ -27,46 +26,44 @@ export default function Home() {
     };
   }, []);
 
-  
-
   return (
     <main
-      className={'dark:bg-black bg-white flex min-h-screen flex-col justify-between md:px-24 px-5'}
+      className={
+        " font-sans dark:bg-black bg-white flex min-h-screen flex-col justify-between md:px-24 px-5"
+      }
     >
       <style jsx>{`
-  @media (min-width: 601px) {
-    body {
-      overflow-y: hidden;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      overflow-y: scroll;
-    }
-  }
-  
-  .mouse-shadow {
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    width: 80vw;
-    height: 100vw;
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 50%;
-    background-color: ${
-      theme !== "light" ? "rgba(200, 205, 205, 0.1);" : "rgba(0, 0, 0, 0.1)"
-    };
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    filter: blur(80px);
-    opacity: 2;
-  }
-  
-  
+        @media (min-width: 601px) {
+          body {
+            overflow-y: hidden;
+          }
+        }
+
+        @media (max-width: 600px) {
+          body {
+            overflow-y: scroll;
+          }
+        }
+
+        .mouse-shadow {
+          position: fixed;
+          top: 30px;
+          left: 30px;
+          width: 80vw;
+          height: 100vw;
+          max-width: 500px;
+          max-height: 500px;
+          border-radius: 50%;
+          background-color: ${theme !== "light"
+            ? "rgba(200, 205, 205, 0.1);"
+            : "rgba(0, 0, 0, 0.1)"};
+          pointer-events: none;
+          transform: translate(-50%, -50%);
+          z-index: 9999;
+          transition: transform 0.1s ease;
+          filter: blur(80px);
+          opacity: 2;
+        }
       `}</style>
       <NavBar />
       <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
@@ -75,5 +72,3 @@ export default function Home() {
     </main>
   );
 }
-
-      
