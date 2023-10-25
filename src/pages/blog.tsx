@@ -28,7 +28,7 @@ function PostCard(post: any) {
             href={post.url}
             className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out hover:underline"
           >
-            Read more
+            Read more ${`->`}
           </Link>
           <ArrowTopRightIcon className="mt-1.5" />
         </div>
