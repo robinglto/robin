@@ -4,7 +4,6 @@ import { allPosts } from ".contentlayer/generated";
 import NavBar from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
-import { ArrowTopRightIcon, Link2Icon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
 function PostCard(post: any) {
@@ -26,11 +25,10 @@ function PostCard(post: any) {
         <div className="lg:flex-0 flex space-x-1 sm:text-md text-sm">
           <Link
             href={post.url}
-            className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out hover:underline"
+            className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out underline underline-offset-2"
           >
-            Read more ${`->`}
+            Read more {`->`}
           </Link>
-          <ArrowTopRightIcon className="mt-1.5" />
         </div>
       </div>
 
