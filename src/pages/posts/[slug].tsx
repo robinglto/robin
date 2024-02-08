@@ -70,10 +70,6 @@ const PostLayout = ({ post }: any) => {
                 </Link>
               </div>
             </div>
-            {/* <div className="font-medium text-sm text-gray-900 hover:text-gray-600 dark:text-white hover:dark:text-gray-300 hover:underline  transition duration-500 ease-in-out cursor-pointer">
-              <Link href="/blog">Back</Link>
-            </div> */}
-
             <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-50  text-start ">
               {post.subtitle}
             </h3>

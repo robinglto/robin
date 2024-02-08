@@ -61,7 +61,7 @@ export default function About() {
         <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 w-full sm:mx-10 p-4">
           <div className="animate-reveal-up">
             <h2 className=" animate-typing subpixel-antialiased font-semibold text-gray-950 dark:text-gray-100/90 lg:text-6xl text-4xl">
-              Saul Perez
+              Hi, {`I'm Robin`}
             </h2>
 
             <p className="subpixel-antialiased text-focus-in md:text-xl text-lg text-gray-500 dark:text-gray-400 mb-4">

@@ -13,8 +13,6 @@ export default function NavBar() {
     setMounted(true); // El tema se ha cargado correctamente
   }, []);
 
-
-
   return (
     <div className="flex justify-between lg:mx-32 mt-12">
       <div>
@@ -22,7 +20,7 @@ export default function NavBar() {
           <li
             className={`hover:text-black dark:hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
               router.pathname === "/"
-                ? "dark:text-white text-black"
+                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-white"
                 : "text-gray-500 dark:text-gray-400"
             }`}
           >
@@ -31,11 +29,11 @@ export default function NavBar() {
           <li
             className={`hover:text-black dark:hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
               router.pathname === "/blog"
-                ? "dark:text-white text-black"
+                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-white"
                 : "text-gray-500 dark:text-gray-400"
             }`}
           >
-            <Link href={"/blog"}>Blog</Link>
+            <Link href={"/blog"}>Writing</Link>
           </li>
         </ul>
       </div>
@@ -49,7 +47,6 @@ export default function NavBar() {
           </button>
         )}
       </div>
-
     </div>
   );
 }
