@@ -22,22 +22,22 @@ function PostCard(post: any) {
         <p className="text-gray-700 dark:text-gray-400 sm:text-md text-sm">
           {post.description}
         </p>
-        <div className="lg:flex-0 flex space-x-1 sm:text-md text-sm">
-          <Link
-            href={post.url}
-            className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out underline underline-offset-2"
-          >
-            Read more {`->`}
-          </Link>
-        </div>
       </div>
 
-      <time
-        dateTime={post.date}
-        className="mb-2 block text-sm text-gray-800 dark:text-gray-300"
-      >
-        {post.date}
-      </time>
+      <div className="lg:flex-0 flex justify-between space-x-1 sm:text-md text-sm">
+        <time
+          dateTime={post.date}
+          className="mb-2 block text-sm text-gray-800 dark:text-gray-300"
+        >
+          {post.date}
+        </time>
+        <Link
+          href={post.url}
+          className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out underline underline-offset-2"
+        >
+          Read more {`->`}
+        </Link>
+      </div>
     </div>
   );
 }
