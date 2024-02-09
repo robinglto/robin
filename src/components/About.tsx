@@ -2,8 +2,7 @@ import React from "react";
 import { SewingPinFilledIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { NotionLogoIcon } from "@radix-ui/react-icons";
-
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { KeyboardIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export default function About() {
@@ -58,7 +57,7 @@ export default function About() {
         `}
       </style>
       <div className="subpixel-antialiased flex justify-center space-x-10 md:mx-10 mb-10 mt-6">
-        <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 w-full sm:mx-10 p-4">
+        <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 max-w-2xl sm:mx-10 p-4">
           <div className="animate-reveal-up">
             <h2 className=" animate-typing subpixel-antialiased font-semibold text-gray-950 dark:text-gray-100/90 lg:text-6xl text-4xl">
               Hi, {`I'm Robin`}
@@ -92,9 +91,9 @@ export default function About() {
               >
                 <NotionLogoIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
               </Link>
-              {/* <Link href={"mailto:pfzsaul@gmail.com"}>
-                <EnvelopeClosedIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
-              </Link> */}
+              <Link href={"https://medium.com/@robinme_"}>
+                <KeyboardIcon className="w-5 h-5 hover:text-black dark:hover:text-white transition delay-300 duration-500 ease-in-out " />
+              </Link>
             </div>
           </div>
         </div>

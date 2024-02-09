@@ -20,7 +20,7 @@ export default function NavBar() {
           <li
             className={`hover:text-black dark:hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
               router.pathname === "/"
-                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-white"
+                ? "dark:text-white text-black underline decoration-2 underline-offset-4 dark:decoration-white decoration-black"
                 : "text-gray-500 dark:text-gray-400"
             }`}
           >
@@ -28,12 +28,12 @@ export default function NavBar() {
           </li>
           <li
             className={`hover:text-black dark:hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
-              router.pathname === "/blog"
-                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-white"
+              router.pathname === "/writing"
+                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-dark dark:decoration-white"
                 : "text-gray-500 dark:text-gray-400"
             }`}
           >
-            <Link href={"/blog"}>Writing</Link>
+            <Link href={"/writing"}>Writing</Link>
           </li>
         </ul>
       </div>

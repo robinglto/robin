@@ -6,7 +6,7 @@ category: Philosophy
 description: Discover profound insights from Seneca on Stoic philosophy, guiding you to inner peace, emotional mastery, and a fulfilling life journey.
 ---
 
-## Exploring Stoicism with Seneca
+### Exploring Stoicism with Seneca
 
 Are you seeking a guide to find inner peace and wisdom amidst life's chaos? Then Stoicism, an ancient philosophy that has withstood the test of time, might be just what you need. And when it comes to Stoicism, it's impossible not to mention one of its most eminent teachers: Seneca.
 

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { GetStaticPropsContext } from "next";
-import { ArrowLeftIcon, DotFilledIcon } from "@radix-ui/react-icons";
+import { DotFilledIcon } from "@radix-ui/react-icons";
 import Footer from "@/components/Footer";
 
 export async function getStaticPaths() {
@@ -34,7 +34,7 @@ const PostLayout = ({ post }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-gray-50 dark:bg-black/95">
+      <div className="bg-gray-50 dark:bg-black/95 dark:text-white text-black">
         <article className="mx-6 sm:mx-auto max-w-2xl py-16">
           <div className="mb-6">
             <h1 className="mb-4 sm:text-2xl text-xl font-semibold text-black dark:text-white text-start">
@@ -63,10 +63,10 @@ const PostLayout = ({ post }: any) => {
               <div>
                 {" "}
                 <Link
-                  href="/blog"
-                  className="underline underline-offset-2 text-sm"
+                  href="/writing"
+                  className="underline underline-offset-2 decoration-2 text-sm"
                 >
-                  Back
+                  {"<-"} Back
                 </Link>
               </div>
             </div>
@@ -75,7 +75,7 @@ const PostLayout = ({ post }: any) => {
             </h3>
 
             <div
-              className=" prose-zinc  prose text-black dark:text-gray-200  "
+              className=" prose-stone dark:prose-invert  prose text-black dark:text-gray-200  "
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             />
           </div>

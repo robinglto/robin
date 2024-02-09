@@ -2,7 +2,6 @@ import Link from "next/link";
 import { compareDesc } from "date-fns";
 import { allPosts } from ".contentlayer/generated";
 import NavBar from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
 
@@ -33,7 +32,7 @@ function PostCard(post: any) {
         </time>
         <Link
           href={post.url}
-          className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out underline underline-offset-2"
+          className="text-black hover:text-black/60 dark:text-white dark:hover:text-white/80 transition delay-150 duration-700 ease-in-out underline underline-offset-2 decoration-2"
         >
           Read more {`->`}
         </Link>
@@ -131,7 +130,7 @@ export default function Blog() {
           animation: reveal-up 1s ease-out;
         }
       `}</style>
-      <div className="flex flex-col justify-between min-h-screen px-3">
+      <div className="flex flex-col justify-start min-h-screen px-3">
         <NavBar />
         <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
 
@@ -142,7 +141,7 @@ export default function Blog() {
                 key={idx}
                 className="flex justify-center items-center animate-reveal-up"
               >
-                <div className="subpixel-antialiased flex justify-center  space-x-10 md:mx-10 text-focus-in">
+                <div className="subpixel-antialiased flex justify-center  space-x-10 md:mx-10 text-focus-in max-w-2xl">
                   <div className="w-full sm:mx-10 p-4">
                     <PostCard {...post} />
                   </div>
@@ -151,8 +150,6 @@ export default function Blog() {
             ))}
           </div>
         </div>
-
-        <Footer />
       </div>
     </main>
   );
