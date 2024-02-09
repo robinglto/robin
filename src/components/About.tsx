@@ -1,4 +1,4 @@
-import React from "react";
+import { design } from "@/pages/api/data";
 import { SewingPinFilledIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { NotionLogoIcon } from "@radix-ui/react-icons";
@@ -8,58 +8,11 @@ import Link from "next/link";
 export default function About() {
   return (
     <section id="/" className="mb-28 mt-28 rounded-xl">
-      <style>
-        {`
-          @keyframes typing {
-            from {
-              width: 0;
-            }
-            to {
-              width: 100%;
-            }
-          }
-
-          .animate-typing {
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 1.5s steps(40) 1.5s 1 normal both;
-          }
-
-          @keyframes reveal-up {
-            0% {
-              opacity: 0;
-              transform: translateY(50%);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          .animate-reveal-up {
-            animation: reveal-up 1s ease-out;
-          }
-
-          @keyframes text-focus-in {
-            0% {
-              opacity: 0;
-              filter: blur(12px);
-            }
-            100% {
-              opacity: 1;
-              filter: blur(0);
-            }
-          }
-
-          .text-focus-in {
-            animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-          }
-        `}
-      </style>
+      <style>{design}</style>
       <div className="subpixel-antialiased flex justify-center space-x-10 md:mx-10 mb-10 mt-6">
         <div className="2xl:w-8/12 xl:w-3/6 lg:w-3/4 max-w-2xl sm:mx-10 p-4">
           <div className="animate-reveal-up">
-            <h2 className=" animate-typing subpixel-antialiased font-semibold text-gray-950 dark:text-gray-100/90 lg:text-6xl text-4xl">
+            <h2 className="animate-typing subpixel-antialiased font-semibold text-gray-950 dark:text-gray-100/90 lg:text-6xl text-4xl">
               Hi, {`I'm Robin`}
             </h2>
 

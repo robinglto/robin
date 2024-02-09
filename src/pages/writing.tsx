@@ -67,16 +67,8 @@ export default function Blog() {
   return (
     <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <style jsx>{`
-        @media (min-width: 601px) {
-          body {
-            overflow-y: hidden;
-          }
-        }
-
-        @media (max-width: 600px) {
-          body {
-            overflow-y: scroll;
-          }
+        body {
+          overflow-y: ${theme === "dark" ? "hidden" : "scroll"};
         }
 
         .mouse-shadow {
@@ -89,7 +81,7 @@ export default function Blog() {
           max-height: ${theme === "dark" ? "500px" : "350px"};
           border-radius: 50%;
           background-color: ${theme !== "light"
-            ? "rgba(200, 205, 205, 0.1);"
+            ? "rgba(200, 205, 205, 0.1)"
             : "rgba(0, 0, 0, 0.23)"};
           pointer-events: none;
           transform: translate(-50%, -50%);
@@ -130,6 +122,7 @@ export default function Blog() {
           animation: reveal-up 1s ease-out;
         }
       `}</style>
+
       <div className="flex flex-col justify-start min-h-screen px-3">
         <NavBar />
         <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>

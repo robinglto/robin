@@ -1,5 +1,5 @@
 ---
-title: Exploring Stoicism with Seneca
+title: Exploring Stoicism With Seneca
 subtitle:
 date: Thu 8 Feb 2023
 category: Philosophy

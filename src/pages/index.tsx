@@ -33,16 +33,8 @@ export default function Home() {
       }
     >
       <style jsx>{`
-        @media (min-width: 601px) {
-          body {
-            overflow-y: hidden;
-          }
-        }
-
-        @media (max-width: 600px) {
-          body {
-            overflow-y: scroll;
-          }
+        body {
+          overflow-y: ${theme === "dark" ? "hidden" : "scroll"};
         }
 
         .mouse-shadow {
@@ -51,12 +43,12 @@ export default function Home() {
           left: 30px;
           width: 80vw;
           height: 100vw;
-          max-width: 500px;
-          max-height: 500px;
+          max-width: ${theme === "dark" ? "500px" : "350px"};
+          max-height: ${theme === "dark" ? "500px" : "350px"};
           border-radius: 50%;
           background-color: ${theme !== "light"
-            ? "rgba(200, 205, 205, 0.1);"
-            : "rgba(0, 0, 0, 0.1)"};
+            ? "rgba(200, 205, 205, 0.1)"
+            : "rgba(0, 0, 0, 0.23)"};
           pointer-events: none;
           transform: translate(-50%, -50%);
           z-index: 9999;
@@ -64,7 +56,39 @@ export default function Home() {
           filter: blur(80px);
           opacity: 2;
         }
+
+        @keyframes text-focus-in {
+          0% {
+            opacity: 0;
+            filter: blur(12px);
+          }
+          100% {
+            opacity: 1;
+            filter: blur(0);
+          }
+        }
+
+        .text-focus-in {
+          animation: text-focus-in 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+            both;
+        }
+
+        @keyframes reveal-up {
+          0% {
+            opacity: 0;
+            transform: translateY(50%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-reveal-up {
+          animation: reveal-up 1s ease-out;
+        }
       `}</style>
+
       <NavBar />
       <div id="mouse-shadow" className="sm:block hidden mouse-shadow"></div>
       <About />

@@ -1,8 +1,4 @@
-import { useRouter } from "next/router";
-import React from "react";
-
 export default function Footer() {
-  const router = useRouter();
   return (
     <div className="flex justify-end mt-auto">
       <div>
