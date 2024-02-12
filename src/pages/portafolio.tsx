@@ -31,7 +31,7 @@ export default function Blog() {
       id: 1,
       title: "Weather App",
       link: "https://weatherglto.vercel.app/",
-      img: `${theme === "dark" ? "/ui/w.png" : "/ui/wl.png"}`,
+      img: `${theme === "dark" ? "/ui/qw.png" : "/ui/qwl.png"}`,
       description:
         "My weather application offers user-friendly information on current weather and future forecasts, featuring a modern interface and functionalities like dark mode for an optimal user experience.",
     },
