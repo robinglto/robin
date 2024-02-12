@@ -64,7 +64,7 @@ export default function Projects() {
                 {item.hashtag.map((hashtag, idx) => (
                   <p
                     key={idx}
-                    className="bg-green-200 dark:bg-green-900 p-1 rounded-md text-sm"
+                    className="bg-green-200 dark:bg-gray-200 dark:text-black p-1 rounded-md text-sm"
                   >
                     {hashtag}
                   </p>
