@@ -35,6 +35,15 @@ export default function NavBar() {
           >
             <Link href={"/writing"}>Writing</Link>
           </li>
+          <li
+            className={`hover:text-black dark:hover:text-white subpixel-antialiased text-lg cursor-pointer transition duration-500 ease-in-out ${
+              router.pathname === "/portafolio"
+                ? "dark:text-white text-black underline decoration-2 underline-offset-4 decoration-dark dark:decoration-white"
+                : "text-gray-500 dark:text-gray-400"
+            }`}
+          >
+            <Link href={"/portafolio"}>Portafolio</Link>
+          </li>
         </ul>
       </div>
       <div>
