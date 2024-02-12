@@ -1,3 +1,5 @@
+import { Portafolio } from "./type";
+
 export const design: string = `@keyframes typing {
     from {
       width: 0;

@@ -41,7 +41,7 @@ function PostCard(post: any) {
   );
 }
 
-export default function Blog() {
+export default function Writing() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );

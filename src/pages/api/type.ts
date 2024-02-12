@@ -3,5 +3,7 @@ export type Portafolio = {
   title: string;
   link: string;
   img: string;
+  hashtag: string[];
+  github: string;
   description: string;
 };
