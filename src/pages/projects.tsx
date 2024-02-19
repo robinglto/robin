@@ -19,15 +19,28 @@ export default function Projects() {
       github: "https://github.com/robinglto/weatherapp",
       hashtag: ["Next.js", "TypeScript", "TailwindCSS"],
     },
+    {
+      id: 2,
+      title: "Learn",
+      link: "https://learnglto.vercel.app/",
+      img: `/ui/learn/${theme === "dark" ? "dark" : "light"}.png`,
+      description:
+        "Learn is a website housing my personal notes on fundamental concepts of electricity and robotics. It is currently under development.",
+      github: "https://github.com/robinglto/learn",
+      hashtag: ["Electricity", "Robotics"],
+    },
   ];
 
   return (
     <main className="dark:bg-black bg-white min-h-screen flex flex-col justify-between md:px-24 ">
       <div className="flex flex-col justify-start min-h-screen px-3">
         <NavBar />
-        <div className="flex justify-center max-w-xl mx-auto my-20">
+        <div className="flex flex-col space-y-20 justify-center max-w-xl mx-auto my-20">
           {data.map((item, idx) => (
-            <div key={idx} className="font-sans space-y-4 font-medium">
+            <div
+              key={idx}
+              className="font-sans space-y-4 font-medium border  dark:border-zinc-900/60 dark:bg-zinc-900/60 transition delay-50 duration-700 ease-in-out border-gray-100/50 bg-gray-100/50  sm:p-4 rounded-xl p-2"
+            >
               <div>
                 <div className="flex justify-between">
                   <div>
